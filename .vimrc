@@ -36,6 +36,7 @@ set tabstop=2 shiftwidth=2 expandtab
 set background=dark
 set term=screen-256color
 set cursorline
+set colorcolumn=100
 
 colorscheme railscasts
 
