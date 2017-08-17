@@ -12,8 +12,8 @@ if [ -d ~/.vim ]; then
   rm -rf ~/.vim
 fi
 
-if [ -d ~/.tmux.conf ]; then
-  rm -rf ~/.tmux.conf
+if [ -f ~/.tmux.conf ]; then
+  rm ~/.tmux.conf
 fi
 
 ln -s ~/dotfiles/.vim ~/.vim
