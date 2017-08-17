@@ -3,7 +3,7 @@ filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-  "Plugin 'scrooloose/nerdtree'
+  Plugin 'scrooloose/nerdtree'
   Plugin 'VundleVim/Vundle.vim'
   Plugin 'jlanzarotta/bufexplorer'
   Plugin 'kien/ctrlp.vim'
@@ -44,9 +44,9 @@ set incsearch
 
 colorscheme railscasts
 
-"map <Leader>n <plug>NERDTreeTabsToggle<CR>    "NERDTree in new tabe
-"let g:nerdtree_tabs_open_on_console_startup=1 "automaticly opens NERDTree when enter vim
-"let NERDTreeShowHidden=1
+map <Leader>n <plug>NERDTreeTabsToggle<CR>    "NERDTree in new tabe
+let g:nerdtree_tabs_open_on_console_startup=1 "automaticly opens NERDTree when enter vim
+let NERDTreeShowHidden=1
 
 let indent_guides_auto_colors=0
 let indent_guides_guide_size=1
@@ -64,4 +64,4 @@ fun! TrimWhitespace()
 endfun
 
 autocmd BufWritePre * :call TrimWhitespace()
-autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
+"autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
