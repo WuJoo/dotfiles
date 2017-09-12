@@ -23,6 +23,7 @@ call vundle#begin()
   Plugin 'tpope/vim-rake'
   Plugin 'vim-ruby/vim-ruby'
   Plugin 'wikitopian/hardmode'
+  Plugin 'epeli/slimux'
 call vundle#end()
 
 syntax on
