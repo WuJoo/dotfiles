@@ -24,6 +24,9 @@ call vundle#begin()
   Plugin 'vim-ruby/vim-ruby'
   Plugin 'wikitopian/hardmode'
   Plugin 'epeli/slimux'
+  Plugin 'alvan/vim-closetag'
+  Plugin 'pangloss/vim-javascript'
+  Plugin 'mxw/vim-jsx'
 call vundle#end()
 
 syntax on
@@ -66,3 +69,12 @@ endfun
 
 autocmd BufWritePre * :call TrimWhitespace()
 "autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
+
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
+let g:closetag_xhtml_filenames = '*.xhtml,*.jsx'
+let g:closetag_filetypes = 'html,xhtml,phtml'
+let g:closetag_xhtml_filetypes = 'xhtml,jsx'
+let g:closetag_emptyTags_caseSensitive = 1
+let g:closetag_shortcut = '>'
+let g:closetag_close_shortcut = '<leader>>'
+
