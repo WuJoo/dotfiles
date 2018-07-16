@@ -66,3 +66,5 @@ endfun
 
 autocmd BufWritePre * :call TrimWhitespace()
 "autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
+
+autocmd BufRead,BufNewFile *.axlsx set filetype=ruby
