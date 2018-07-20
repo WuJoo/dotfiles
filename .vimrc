@@ -27,6 +27,7 @@ call vundle#begin()
   Plugin 'alvan/vim-closetag'
   Plugin 'pangloss/vim-javascript'
   Plugin 'mxw/vim-jsx'
+  Plugin 'rainerborene/vim-reek'
 call vundle#end()
 
 syntax on
@@ -71,10 +72,18 @@ autocmd BufWritePre * :call TrimWhitespace()
 "autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 autocmd BufRead,BufNewFile *.axlsx set filetype=ruby
 
-let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
-let g:closetag_xhtml_filenames = '*.xhtml,*.jsx'
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.erb'
+let g:closetag_xhtml_filenames = '*.xhtml,*.jsx,*.js'
 let g:closetag_filetypes = 'html,xhtml,phtml'
 let g:closetag_xhtml_filetypes = 'xhtml,jsx'
 let g:closetag_emptyTags_caseSensitive = 1
 let g:closetag_shortcut = '>'
 let g:closetag_close_shortcut = '<leader>>'
+
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O
