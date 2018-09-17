@@ -27,7 +27,7 @@ call vundle#begin()
   Plugin 'alvan/vim-closetag'
   Plugin 'pangloss/vim-javascript'
   Plugin 'mxw/vim-jsx'
-  Plugin 'rainerborene/vim-reek'
+  "Plugin 'rainerborene/vim-reek'
 call vundle#end()
 
 syntax on
