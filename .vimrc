@@ -20,6 +20,7 @@ call vundle#begin()
   Plugin 'mxw/vim-jsx'
   ""Plugin 'wikitopian/hardmode'
   ""Plugin 'epeli/slimux'
+  Plugin 'lervag/vimtex'
   "Plugin 'rainerborene/vim-reek'
 call vundle#end()
 
@@ -80,3 +81,5 @@ inoremap [ []<left>
 inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
+
+nmap <F2> :NERDTreeToggle<CR>
