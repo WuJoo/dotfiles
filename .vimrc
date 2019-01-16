@@ -3,30 +3,30 @@ filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-  Plugin 'scrooloose/nerdtree'
   Plugin 'VundleVim/Vundle.vim'
   Plugin 'ervandew/supertab'
-  Plugin 'vim-syntastic/syntastic'
   Plugin 'godlygeek/tabular'
-  Plugin 'edkolev/tmuxline.vim'
   Plugin 'vim-airline/vim-airline'
   Plugin 'vim-airline/vim-airline-themes'
   Plugin 'tpope/vim-endwise'
   Plugin 'nathanaelkane/vim-indent-guides'
+  Plugin 'scrooloose/nerdtree'
   Plugin 'jistr/vim-nerdtree-tabs'
-  Plugin 'vim-ruby/vim-ruby'
   Plugin 'alvan/vim-closetag'
+  Plugin 'vim-ruby/vim-ruby'
   Plugin 'pangloss/vim-javascript'
-  Plugin 'mxw/vim-jsx'
-  ""Plugin 'wikitopian/hardmode'
-  ""Plugin 'epeli/slimux'
-  Plugin 'lervag/vimtex'
-  "Plugin 'rainerborene/vim-reek'
+
+  "Plugin 'edkolev/tmuxline.vim'
+  "Plugin 'vim-syntastic/syntastic'
+  "Plugin 'wikitopian/hardmode'
+  "Plugin 'epeli/slimux'
+  "Plugin 'lervag/vimtex'
 call vundle#end()
 
 syntax on
 filetype plugin indent on
 
+"set paste
 set encoding=utf-8
 set relativenumber
 set number
@@ -43,8 +43,7 @@ set incsearch
 
 colorscheme railscasts
 
-map <Leader>n <plug>NERDTreeTabsToggle<CR>    "NERDTree in new tabe
-let g:nerdtree_tabs_open_on_console_startup=1 "automaticly opens NERDTree when enter vim
+"show hidden files in NERDTree
 let NERDTreeShowHidden=1
 
 let indent_guides_auto_colors=0
@@ -63,7 +62,6 @@ fun! TrimWhitespace()
 endfun
 
 autocmd BufWritePre * :call TrimWhitespace()
-"autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 autocmd BufRead,BufNewFile *.axlsx set filetype=ruby
 
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.erb'
@@ -82,4 +80,5 @@ inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
 
-nmap <F2> :NERDTreeToggle<CR>
+"F2 shortcut for NERDTree
+nmap <F2> :NERDTreeTabsToggle<CR>
