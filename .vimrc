@@ -45,6 +45,7 @@ colorscheme railscasts
 
 "show hidden files in NERDTree
 let NERDTreeShowHidden=1
+let g:NERDTreeNodeDelimiter = "\u00a0"
 
 let indent_guides_auto_colors=0
 let indent_guides_guide_size=1
