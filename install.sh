@@ -1,5 +1,8 @@
 #!/bin/bash
 
+cd ~/dotfiles
+git pull origin master
+
 if [ -d ~/dotfiles/.vim/bundle/Vundle.vim ]; then
   cd ~/dotfiles/.vim/bundle/Vundle.vim
   git pull origin master
