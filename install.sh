@@ -1,8 +1,11 @@
 #!/bin/bash
 
-cd ~/dotfiles
-git submodule init
-git submodule update
+if [ -d ~/dotfiles/.vim/bundle/Vundle.vim ]; then
+  cd ~/dotfiles/.vim/bundle/Vundle.vim
+  git pull origin master
+else
+  git clone https://github.com/VundleVim/Vundle.vim.git ~/dotfiles/.vim/bundle/Vundle.vim
+fi
 
 if [ -f ~/.vimrc ]; then
   rm ~/.vimrc
@@ -25,4 +28,4 @@ ln -s ~/dotfiles/.vimrc ~/.vimrc
 ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
 ln -s ~/dotfiles/.pryrc ~/.pryrc
 
-vim +PluginInstall +qall
+vim +BundleInstall! +BundleClean +qall
