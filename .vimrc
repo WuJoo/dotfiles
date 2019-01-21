@@ -1,8 +1,10 @@
+set shell=/bin/bash
+
 set nocompatible
 filetype off
 
-set shell=bash
 
+"""" PLUGINS
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
   Plugin 'VundleVim/Vundle.vim'
@@ -17,9 +19,12 @@ call vundle#begin()
   Plugin 'alvan/vim-closetag'
   Plugin 'vim-ruby/vim-ruby'
   Plugin 'pangloss/vim-javascript'
+  Plugin 'jiangmiao/auto-pairs'
+  Plugin 'w0rp/ale'
+  Plugin 'ctrlpvim/ctrlp.vim'
 
+  "Plugin 'dracula/vim'
   "Plugin 'edkolev/tmuxline.vim'
-  "Plugin 'vim-syntastic/syntastic'
   "Plugin 'wikitopian/hardmode'
   "Plugin 'epeli/slimux'
   "Plugin 'lervag/vimtex'
@@ -28,47 +33,74 @@ call vundle#end()
 syntax on
 filetype plugin indent on
 
-"set paste
-set encoding=utf-8
-set relativenumber
-set number
-set mouse=a
-set backspace=indent,eol,start
-set tabstop=2 shiftwidth=2 expandtab
-set background=dark
-set term=screen-256color
-set cursorline
-set colorcolumn=100
-set showcmd
-set hlsearch
-set incsearch
 
+""" BASIC SETTINGS
+set encoding=utf-8              " set encoding to UTF-8
+set mouse=a                     " enable mouse
+
+set number                      " show line number
+set relativenumber              " relative line numbering for lines other than current
+set cursorline                  " highlight current line
+set colorcolumn=120             " highlight 120. column
+set showmatch                   " highlight matching parentheses / brackets [{()}]
+set lazyredraw                  " redraw screen only when we need to
+set showcmd                     " show typed keys
+set visualbell                  " blink cursor on error, instead of beeping
+
+set incsearch                   " search as characters are entered
+set hlsearch                    " highlight matches
+
+set tabstop=2                   " number of spaces per <TAB>
+set expandtab                   " convert <TAB> key-presses to spaces
+set shiftwidth=2                " set a <TAB> key-press equal to 4 spaces
+
+set autoindent                  " copy indent from current line when starting a new line
+set smartindent                 " even better autoindent (e.g. add indent after '{')'}')
+
+set background=dark             " configure Vim to use brighter colors
+set autoread                    " autoreload the file in Vim if it has been changed outside of Vim
+
+set backspace=indent,eol,start
+set term=screen-256color
+
+" set paste
+
+
+""" CUSTOM KEY BINDINGS
+
+"move vertically by visual line (don't skip wrapped lines)
+nmap j gj
+nmap k gk
+
+
+""" COLORS
 colorscheme railscasts
 
-"show hidden files in NERDTree
-let NERDTreeShowHidden=1
-let g:NERDTreeNodeDelimiter = "\u00a0"
+
+""" PLUGINS SETTINGS
+
+
+""" NERDTree
+nmap <F2> :NERDTreeTabsToggle<CR>       " F2 shortcut for NERDTree
+
+let NERDTreeShowHidden=1                " show hidden files in NERDTree
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
+let g:NERDTreeNodeDelimiter = "\u00a0"
 
+
+""" vim-indent-guides
 let indent_guides_auto_colors=0
 let indent_guides_guide_size=1
 hi IndentGuidesOdd ctermbg=236
 hi IndentGuidesEven ctermbg=237
-let g:indent_guides_enable_on_vim_startup=1
+let g:indent_guides_enable_on_vim_startup=1  " enable indent guides on startup
 
-"let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#tabline#enabled=1
 let g:airline_theme='base16_railscasts'
 
-fun! TrimWhitespace()
-  let l:save = winsaveview()
-  %s/\s\+$//e
-  call winrestview(l:save)
-endfun
 
-autocmd BufWritePre * :call TrimWhitespace()
-autocmd BufRead,BufNewFile *.axlsx set filetype=ruby
-
+""" vim-closetag
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.erb'
 let g:closetag_xhtml_filenames = '*.xhtml,*.jsx,*.js'
 let g:closetag_filetypes = 'html,xhtml,phtml'
@@ -77,13 +109,21 @@ let g:closetag_emptyTags_caseSensitive = 1
 let g:closetag_shortcut = '>'
 let g:closetag_close_shortcut = '<leader>>'
 
-inoremap " ""<left>
-inoremap ' ''<left>
-inoremap ( ()<left>
-inoremap [ []<left>
-inoremap { {}<left>
-inoremap {<CR> {<CR>}<ESC>O
-inoremap {;<CR> {<CR>};<ESC>O
 
-"F2 shortcut for NERDTree
-nmap <F2> :NERDTreeTabsToggle<CR>
+""" ctrlp.vim
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
+
+"'"" 'CUSTOM FUNCTIONS
+
+
+""" function for trimming whitespaces
+
+fun! TrimWhitespace()
+  let l:save = winsaveview()
+  %s/\s\+$//e
+  call winrestview(l:save)
+endfun
+
+autocmd BufWritePre * :call TrimWhitespace() " call TrimWhitespace on save
