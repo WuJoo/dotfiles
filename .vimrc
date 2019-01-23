@@ -22,7 +22,9 @@ call vundle#begin()
   Plugin 'jiangmiao/auto-pairs'
   Plugin 'w0rp/ale'
   Plugin 'ctrlpvim/ctrlp.vim'
+  Plugin 'chrisbra/csv.vim'
 
+  "Plugin 'DavidEGx/ctrlp-smarttabs'
   "Plugin 'dracula/vim'
   "Plugin 'edkolev/tmuxline.vim'
   "Plugin 'wikitopian/hardmode'
@@ -74,8 +76,7 @@ nmap k gk
 
 
 """ COLORS
-colorscheme railscasts
-
+colorscheme railscasts " other: monokai ubloh
 
 """ PLUGINS SETTINGS
 
@@ -98,6 +99,8 @@ let g:indent_guides_enable_on_vim_startup=1  " enable indent guides on startup
 
 let g:airline#extensions#tabline#enabled=1
 let g:airline_theme='base16_railscasts'
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
 
 
 """ vim-closetag
@@ -114,8 +117,9 @@ let g:closetag_close_shortcut = '<leader>>'
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
+"let g:ctrlp_extensions = ['smarttabs']
 
-"'"" 'CUSTOM FUNCTIONS
+""" CUSTOM FUNCTIONS
 
 
 """ function for trimming whitespaces
