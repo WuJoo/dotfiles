@@ -23,7 +23,14 @@ call vundle#begin()
   Plugin 'w0rp/ale'
   Plugin 'ctrlpvim/ctrlp.vim'
   Plugin 'chrisbra/csv.vim'
+  Plugin 'tpope/vim-fugitive'
+  Plugin 'flazz/vim-colorschemes'
+  Plugin 'kshenoy/vim-signature'
+  Plugin 'junegunn/vim-peekaboo'
+  Plugin 'airblade/vim-gitgutter'
+  Plugin 'mileszs/ack.vim'
 
+  "Plugin 'notpratheek/vim-luna'
   "Plugin 'DavidEGx/ctrlp-smarttabs'
   "Plugin 'dracula/vim'
   "Plugin 'edkolev/tmuxline.vim'
@@ -65,8 +72,13 @@ set autoread                    " autoreload the file in Vim if it has been chan
 set backspace=indent,eol,start
 set term=screen-256color
 
-" set paste
+set clipboard=unnamed
 
+if has('unnamedplus')
+    set clipboard=unnamed,unnamedplus
+endif
+
+" set paste
 
 """ CUSTOM KEY BINDINGS
 
@@ -76,7 +88,8 @@ nmap k gk
 
 
 """ COLORS
-colorscheme railscasts " other: monokai ubloh
+colorscheme railscasts " other: monokai ubloh railscasts
+
 
 """ PLUGINS SETTINGS
 
@@ -118,6 +131,10 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
 "let g:ctrlp_extensions = ['smarttabs']
+
+""" vim-gitgutter
+let g:SignatureMarkTextHLDynamic = 1  " vim gitgutter and vim signature lives together
+let g:gitgutter_enabled = 0           " disable gitgutter by default
 
 """ CUSTOM FUNCTIONS
 
