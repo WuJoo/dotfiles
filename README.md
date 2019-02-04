@@ -1,5 +1,11 @@
 # dotfiles
 
+## Install dependencies
+
+Ack:
+
+`https://beyondgrep.com/install/`
+
 ## Instal
 
 Clone repository:
