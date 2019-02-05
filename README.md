@@ -6,7 +6,7 @@ Ack:
 
 `https://beyondgrep.com/install/`
 
-## Instal
+## Install
 
 Clone repository:
 
