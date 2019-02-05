@@ -88,8 +88,8 @@ nmap k gk
 
 
 """ COLORS
-colorscheme railscasts " other: monokai ubloh railscasts
-
+colorscheme monochrome           "other: railscasts monokai ubloh railscasts
+highlight ColorColumn ctermbg=7  "colorcolumn color
 
 """ PLUGINS SETTINGS
 
@@ -111,7 +111,7 @@ hi IndentGuidesEven ctermbg=237
 let g:indent_guides_enable_on_vim_startup=1  " enable indent guides on startup
 
 let g:airline#extensions#tabline#enabled=1
-let g:airline_theme='base16_railscasts'
+let g:airline_theme='monochrome'             " other: 'base16_railscasts'
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 
