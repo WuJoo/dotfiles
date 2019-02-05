@@ -29,12 +29,10 @@ call vundle#begin()
   Plugin 'junegunn/vim-peekaboo'
   Plugin 'airblade/vim-gitgutter'
   Plugin 'mileszs/ack.vim'
+  Plugin 'takac/vim-hardtime'
 
-  "Plugin 'notpratheek/vim-luna'
   "Plugin 'DavidEGx/ctrlp-smarttabs'
-  "Plugin 'dracula/vim'
   "Plugin 'edkolev/tmuxline.vim'
-  "Plugin 'wikitopian/hardmode'
   "Plugin 'epeli/slimux'
   "Plugin 'lervag/vimtex'
 call vundle#end()
@@ -135,6 +133,10 @@ let g:ctrlp_cmd = 'CtrlP'
 """ vim-gitgutter
 let g:SignatureMarkTextHLDynamic = 1  " vim gitgutter and vim signature lives together
 let g:gitgutter_enabled = 0           " disable gitgutter by default
+
+"""" vim-hardtime
+nmap <F1> :HardTimeToggle<CR>       " F1 shortcut for hardtime toggle
+let g:hardtime_default_on = 1       " hardtime enabled by default
 
 """ CUSTOM FUNCTIONS
 
