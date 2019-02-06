@@ -134,9 +134,10 @@ let g:ctrlp_cmd = 'CtrlP'
 let g:SignatureMarkTextHLDynamic = 1  " vim gitgutter and vim signature lives together
 let g:gitgutter_enabled = 0           " disable gitgutter by default
 
-"""" vim-hardtime
-nmap <F1> :HardTimeToggle<CR>       " F1 shortcut for hardtime toggle
-let g:hardtime_default_on = 1       " hardtime enabled by default
+""" vim-hardtime
+nmap <F1> :HardTimeToggle<CR>                         " F1 shortcut for hardtime toggle
+let g:hardtime_default_on = 1                         " hardtime enabled by default
+let g:hardtime_ignore_buffer_patterns = ["NERD.*"]    " disable hardtime for NERDTree
 
 """ CUSTOM FUNCTIONS
 
