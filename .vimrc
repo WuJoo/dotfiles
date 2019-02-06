@@ -30,6 +30,7 @@ call vundle#begin()
   Plugin 'airblade/vim-gitgutter'
   Plugin 'mileszs/ack.vim'
   Plugin 'takac/vim-hardtime'
+  Plugin 'cocopon/iceberg.vim'
 
   "Plugin 'DavidEGx/ctrlp-smarttabs'
   "Plugin 'edkolev/tmuxline.vim'
@@ -86,8 +87,8 @@ nmap k gk
 
 
 """ COLORS
-colorscheme monochrome           "other: railscasts monokai ubloh railscasts
-highlight ColorColumn ctermbg=7  "colorcolumn color
+colorscheme iceberg "other colorschemes: monochrome monokai ubloh railscasts
+
 
 """ PLUGINS SETTINGS
 
@@ -109,7 +110,7 @@ hi IndentGuidesEven ctermbg=237
 let g:indent_guides_enable_on_vim_startup=1  " enable indent guides on startup
 
 let g:airline#extensions#tabline#enabled=1
-let g:airline_theme='monochrome'             " other: 'base16_railscasts'
+let g:airline_theme='iceberg'                " other: monochrome base16_railscasts
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 
@@ -135,7 +136,7 @@ let g:SignatureMarkTextHLDynamic = 1  " vim gitgutter and vim signature lives to
 let g:gitgutter_enabled = 0           " disable gitgutter by default
 
 """ vim-hardtime
-nmap <F1> :HardTimeToggle<CR>                         " F1 shortcut for hardtime toggle
+nmap <F3> :HardTimeToggle<CR>                         " F1 shortcut for hardtime toggle
 let g:hardtime_default_on = 1                         " hardtime enabled by default
 let g:hardtime_ignore_buffer_patterns = ["NERD.*"]    " disable hardtime for NERDTree
 
