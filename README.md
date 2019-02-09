@@ -2,9 +2,15 @@
 
 ## Install dependencies
 
-Ack:
+- Vim 8
 
-`https://beyondgrep.com/install/`
+- Tmux
+
+- Zsh
+
+- oh-my-zsh
+
+- Ack: `https://beyondgrep.com/install/`
 
 ## Install
 
