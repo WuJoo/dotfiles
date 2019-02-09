@@ -26,7 +26,6 @@ call vundle#begin()
   Plugin 'ctrlpvim/ctrlp.vim'                         " fuzzy file finder
   Plugin 'ervandew/supertab'                          " tab completion in insert mode
   Plugin 'scrooloose/nerdtree'                        " file tree
-  Plugin 'jistr/vim-nerdtree-tabs'                    " one nerd tree for tabs
   Plugin 'kshenoy/vim-signature'                      " showing marks next to line number
   Plugin 'junegunn/vim-peekaboo'                      " better support for registers
   Plugin 'tpope/vim-fugitive'                         " git wrapper
@@ -96,7 +95,7 @@ colorscheme iceberg                                   " other colorschemes: mono
 
 
 """ NERDTree
-nmap <F2> :NERDTreeTabsToggle<CR>                     " F2 shortcut for NERDTree
+nmap <F2> :NERDTreeToggle<CR>                         " F2 shortcut for NERDTree
 
 let NERDTreeShowHidden=1                              " show hidden files in NERDTree
 let NERDTreeMinimalUI = 1
