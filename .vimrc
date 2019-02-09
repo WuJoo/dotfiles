@@ -40,6 +40,7 @@ call vundle#begin()
 
   """ Other
   Plugin 'mechatroner/rainbow_csv'                    " betters colors and queries for .csv files
+  Plugin 'mhinz/vim-startify'                         " custom start screen
 
   "Plugin 'DavidEGx/ctrlp-smarttabs'
   "Plugin 'edkolev/tmuxline.vim'
@@ -158,3 +159,9 @@ fun! TrimWhitespace()
 endfun
 
 autocmd BufWritePre * :call TrimWhitespace()          " trimming whitespaces on save
+
+if has("autocmd")
+  augroup templates
+    autocmd BufNewFile *.rb 0r ~/.vim/templates/skeleton.rb
+  augroup END
+endif                                                 " template for new ruby files
