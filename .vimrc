@@ -7,30 +7,40 @@ filetype off
 """" PLUGINS
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-  Plugin 'VundleVim/Vundle.vim'
-  Plugin 'ervandew/supertab'
-  Plugin 'godlygeek/tabular'
-  Plugin 'vim-airline/vim-airline'
-  Plugin 'vim-airline/vim-airline-themes'
-  Plugin 'tpope/vim-endwise'
-  Plugin 'nathanaelkane/vim-indent-guides'
-  Plugin 'scrooloose/nerdtree'
-  Plugin 'jistr/vim-nerdtree-tabs'
-  Plugin 'alvan/vim-closetag'
-  Plugin 'vim-ruby/vim-ruby'
-  Plugin 'pangloss/vim-javascript'
-  Plugin 'jiangmiao/auto-pairs'
-  Plugin 'w0rp/ale'
-  Plugin 'ctrlpvim/ctrlp.vim'
-  Plugin 'chrisbra/csv.vim'
-  Plugin 'tpope/vim-fugitive'
-  Plugin 'flazz/vim-colorschemes'
-  Plugin 'kshenoy/vim-signature'
-  Plugin 'junegunn/vim-peekaboo'
-  Plugin 'airblade/vim-gitgutter'
-  Plugin 'mileszs/ack.vim'
-  Plugin 'takac/vim-hardtime'
-  Plugin 'cocopon/iceberg.vim'
+  Plugin 'VundleVim/Vundle.vim'                       " best plugin manager
+
+  """ Programming languages support
+  Plugin 'vim-ruby/vim-ruby'                          " better ruby support
+  Plugin 'pangloss/vim-javascript'                    " better js support
+
+  """ Better productivity
+  Plugin 'takac/vim-hardtime'                         " avoid hjkl
+  Plugin 'godlygeek/tabular'                          " aligning assignments
+  Plugin 'tpope/vim-endwise'                          " smart do end blocks in ruby
+  Plugin 'alvan/vim-closetag'                         " closing html tags
+  Plugin 'jiangmiao/auto-pairs'                       " inserting brackets in pairs
+
+  """ Vim as IDE
+  Plugin 'mileszs/ack.vim'                            " integration with ack searching(better grep in vim)
+  Plugin 'w0rp/ale'                                   " asynchronous linting
+  Plugin 'ctrlpvim/ctrlp.vim'                         " fuzzy file finder
+  Plugin 'ervandew/supertab'                          " tab completion in insert mode
+  Plugin 'scrooloose/nerdtree'                        " file tree
+  Plugin 'jistr/vim-nerdtree-tabs'                    " one nerd tree for tabs
+  Plugin 'kshenoy/vim-signature'                      " showing marks next to line number
+  Plugin 'junegunn/vim-peekaboo'                      " better support for registers
+  Plugin 'tpope/vim-fugitive'                         " git wrapper
+  Plugin 'airblade/vim-gitgutter'                     " show git diff in vim
+
+  """ Prettier Vim
+  Plugin 'nathanaelkane/vim-indent-guides'            " coloring indentations
+  Plugin 'vim-airline/vim-airline'                    " airline statusline
+  Plugin 'vim-airline/vim-airline-themes'             " themes for airline statusline
+  Plugin 'cocopon/iceberg.vim'                        " iceberg colorscheme
+  Plugin 'flazz/vim-colorschemes'                     " useful to checking different colorschemes
+
+  """ Other
+  Plugin 'mechatroner/rainbow_csv'                    " betters colors and queries for .csv files
 
   "Plugin 'DavidEGx/ctrlp-smarttabs'
   "Plugin 'edkolev/tmuxline.vim'
@@ -42,31 +52,30 @@ syntax on
 filetype plugin indent on
 
 
-""" BASIC SETTINGS
-set encoding=utf-8              " set encoding to UTF-8
-set mouse=a                     " enable mouse
+set encoding=utf-8                                    " set encoding to UTF-8
+set mouse=a                                           " enable mouse
 
-set number                      " show line number
-set relativenumber              " relative line numbering for lines other than current
-set cursorline                  " highlight current line
-set colorcolumn=120             " highlight 120. column
-set showmatch                   " highlight matching parentheses / brackets [{()}]
-set lazyredraw                  " redraw screen only when we need to
-set showcmd                     " show typed keys
-set visualbell                  " blink cursor on error, instead of beeping
+set number                                            " show line number
+set relativenumber                                    " relative line numbering for lines other than current
+set cursorline                                        " highlight current line
+set colorcolumn=120                                   " highlight 120. column
+set showmatch                                         " highlight matching parentheses / brackets [{()}]
+set lazyredraw                                        " redraw screen only when we need to
+set showcmd                                           " show typed keys
+set visualbell                                        " blink cursor on error, instead of beeping
 
-set incsearch                   " search as characters are entered
-set hlsearch                    " highlight matches
+set incsearch                                         " search as characters are entered
+set hlsearch                                          " highlight matches
 
-set tabstop=2                   " number of spaces per <TAB>
-set expandtab                   " convert <TAB> key-presses to spaces
-set shiftwidth=2                " set a <TAB> key-press equal to 4 spaces
+set tabstop=2                                         " number of spaces per <TAB>
+set expandtab                                         " convert <TAB> key-presses to spaces
+set shiftwidth=2                                      " set a <TAB> key-press equal to 4 spaces
 
-set autoindent                  " copy indent from current line when starting a new line
-set smartindent                 " even better autoindent (e.g. add indent after '{')'}')
+set autoindent                                        " copy indent from current line when starting a new line
+set smartindent                                       " even better autoindent (e.g. add indent after '{')'}')
 
-set background=dark             " configure Vim to use brighter colors
-set autoread                    " autoreload the file in Vim if it has been changed outside of Vim
+set background=dark                                   " configure Vim to use brighter colors
+set autoread                                          " autoreload the file in Vim if it has been changed outside of Vim
 
 set backspace=indent,eol,start
 set term=screen-256color
@@ -77,26 +86,19 @@ if has('unnamedplus')
     set clipboard=unnamed,unnamedplus
 endif
 
-" set paste
-
-""" CUSTOM KEY BINDINGS
-
-"move vertically by visual line (don't skip wrapped lines)
+" move vertically by visual line (don't skip wrapped lines)
 nmap j gj
 nmap k gk
 
 
-""" COLORS
-colorscheme iceberg "other colorschemes: monochrome monokai ubloh railscasts
-
-
-""" PLUGINS SETTINGS
+""" Colors
+colorscheme iceberg                                   " other colorschemes: monochrome monokai ubloh railscasts
 
 
 """ NERDTree
-nmap <F2> :NERDTreeTabsToggle<CR>       " F2 shortcut for NERDTree
+nmap <F2> :NERDTreeTabsToggle<CR>                     " F2 shortcut for NERDTree
 
-let NERDTreeShowHidden=1                " show hidden files in NERDTree
+let NERDTreeShowHidden=1                              " show hidden files in NERDTree
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 let g:NERDTreeNodeDelimiter = "\u00a0"
@@ -107,10 +109,12 @@ let indent_guides_auto_colors=0
 let indent_guides_guide_size=1
 hi IndentGuidesOdd ctermbg=236
 hi IndentGuidesEven ctermbg=237
-let g:indent_guides_enable_on_vim_startup=1  " enable indent guides on startup
+let g:indent_guides_enable_on_vim_startup=1           " enable indent guides on startup
 
+
+""" vim-airline
 let g:airline#extensions#tabline#enabled=1
-let g:airline_theme='iceberg'                " other: monochrome base16_railscasts
+let g:airline_theme='iceberg'
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 
@@ -126,24 +130,26 @@ let g:closetag_close_shortcut = '<leader>>'
 
 
 """ ctrlp.vim
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_map = '<c-p>'                             " ctrl+p shortcut to toggle ctrlp
+let g:ctrlp_cmd = 'CtrlP'                             " :CtrlP command to toggle ctrlp
 
-"let g:ctrlp_extensions = ['smarttabs']
 
 """ vim-gitgutter
-let g:SignatureMarkTextHLDynamic = 1  " vim gitgutter and vim signature lives together
-let g:gitgutter_enabled = 0           " disable gitgutter by default
+let g:SignatureMarkTextHLDynamic = 1                  " vim gitgutter and vim signature lives together
+let g:gitgutter_enabled = 0                           " disable gitgutter by default
+
 
 """ vim-hardtime
-nmap <F3> :HardTimeToggle<CR>                         " F1 shortcut for hardtime toggle
+nmap <F3> :HardTimeToggle<CR>                         " F3 shortcut for hardtime toggle
 let g:hardtime_default_on = 1                         " hardtime enabled by default
 let g:hardtime_ignore_buffer_patterns = ["NERD.*"]    " disable hardtime for NERDTree
 
-""" CUSTOM FUNCTIONS
+
+""" rainbow_csv
+let g:rcsv_colorpairs = [['red', 'red'], ['blue', 'blue'], ['green', 'green'], ['magenta', 'magenta'], ['NONE', 'NONE'],['darkred', 'darkred'], ['darkblue', 'darkblue'], ['darkgreen', 'darkgreen'], ['darkmagenta', 'darkmagenta'],['darkcyan', 'darkcyan']] " colors for csv file columns
 
 
-""" function for trimming whitespaces
+""" trimming whitespaces
 
 fun! TrimWhitespace()
   let l:save = winsaveview()
@@ -151,4 +157,4 @@ fun! TrimWhitespace()
   call winrestview(l:save)
 endfun
 
-autocmd BufWritePre * :call TrimWhitespace() " call TrimWhitespace on save
+autocmd BufWritePre * :call TrimWhitespace()          " trimming whitespaces on save
