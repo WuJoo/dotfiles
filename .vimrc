@@ -136,6 +136,7 @@ let g:ctrlp_cmd = 'CtrlP'                             " :CtrlP command to toggle
 """ vim-gitgutter
 let g:SignatureMarkTextHLDynamic = 1                  " vim gitgutter and vim signature lives together
 let g:gitgutter_enabled = 0                           " disable gitgutter by default
+let g:ctrlp_show_hidden = 1                           " show hidden files in ctrlp
 
 
 """ vim-hardtime
