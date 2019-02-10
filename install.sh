@@ -11,7 +11,7 @@ else
   git clone https://github.com/VundleVim/Vundle.vim.git
 fi
 
-if [ -d ~/dotfiles/.tmux-themepack ]; then
+if [ -d ~/dotfiles/tmux-themepack ]; then
   cd ~/dotfiles/tmux-themepack
   git pull origin master
 else

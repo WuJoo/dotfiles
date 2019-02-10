@@ -10,3 +10,4 @@ ZSH_TMUX_AUTOSTART="true"
 plugins=(git bundler rails tmux ruby rvm tmux)
 
 source $ZSH/oh-my-zsh.sh
+export PATH="$PATH:$HOME/.rvm/bin"
