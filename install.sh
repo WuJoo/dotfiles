@@ -7,7 +7,16 @@ if [ -d ~/dotfiles/.vim/bundle/Vundle.vim ]; then
   cd ~/dotfiles/.vim/bundle/Vundle.vim
   git pull origin master
 else
-  git clone https://github.com/VundleVim/Vundle.vim.git ~/dotfiles/.vim/bundle/Vundle.vim
+  cd ~/dotfiles/.vim/bundle
+  git clone https://github.com/VundleVim/Vundle.vim.git
+fi
+
+if [ -d ~/dotfiles/.tmux-themepack ]; then
+  cd ~/dotfiles/tmux-themepack
+  git pull origin master
+else
+  cd ~/dotfiles
+  git clone https://github.com/jimeh/tmux-themepack.git
 fi
 
 if [ -f ~/.vimrc ]; then
@@ -37,7 +46,7 @@ fi
 ln -s ~/dotfiles/.vim ~/.vim
 ln -s ~/dotfiles/.vimrc ~/.vimrc
 ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
-ln -s ~/dotfiles/.tmux-themepack ~/.tmux-themepack
+ln -s ~/dotfiles/tmux-themepack ~/.tmux-themepack
 ln -s ~/dotfiles/.pryrc ~/.pryrc
 ln -s ~/dotfiles/.zshrc ~/.zshrc
 
