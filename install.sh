@@ -22,6 +22,10 @@ if [ -f ~/.tmux.conf ]; then
   rm ~/.tmux.conf
 fi
 
+if [ -f ~/.tmux-themepack ]; then
+  rm ~/.tmux-themepack
+fi
+
 if [ -f ~/.pryrc ]; then
   rm ~/.pryrc
 fi
@@ -33,6 +37,7 @@ fi
 ln -s ~/dotfiles/.vim ~/.vim
 ln -s ~/dotfiles/.vimrc ~/.vimrc
 ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
+ln -s ~/dotfiles/.tmux-themepack ~/.tmux-themepack
 ln -s ~/dotfiles/.pryrc ~/.pryrc
 ln -s ~/dotfiles/.zshrc ~/.zshrc
 

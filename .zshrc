@@ -2,7 +2,7 @@ if [[ "$OSTYPE" == "darwin"*  ]]; then
   export ZSH="/Users/wj/.oh-my-zsh"
 fi
 
-ZSH_THEME="amuse"
+ZSH_THEME="avit"
 
 ENABLE_CORRECTION="true"
 ZSH_TMUX_AUTOSTART="true"
