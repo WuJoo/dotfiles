@@ -1,4 +1,6 @@
-export ZSH="/Users/wj/.oh-my-zsh"
+if [[ "$OSTYPE" == "darwin"*  ]]; then
+  export ZSH="/Users/wj/.oh-my-zsh"
+fi
 
 ZSH_THEME="amuse"
 
