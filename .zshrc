@@ -1,5 +1,7 @@
 if [[ "$OSTYPE" == "darwin"*  ]]; then
   export ZSH="/Users/wj/.oh-my-zsh"
+else
+  export ZSH="/home/wj/.oh-my-zsh"
 fi
 
 ZSH_THEME="avit"
