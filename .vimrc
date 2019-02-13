@@ -102,6 +102,8 @@ let NERDTreeShowHidden=1                              " show hidden files in NER
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 let g:NERDTreeNodeDelimiter = "\u00a0"
+let NERDTreeQuitOnOpen = 1                            " quit nerdtree when opening file
+let NERDTreeAutoDeleteBuffer = 1                      " remove buffer with deleted file automaticly
 
 
 """ vim-indent-guides
