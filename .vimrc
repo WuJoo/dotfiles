@@ -134,12 +134,12 @@ let g:closetag_close_shortcut = '<leader>>'
 """ ctrlp.vim
 let g:ctrlp_map = '<c-p>'                             " ctrl+p shortcut to toggle ctrlp
 let g:ctrlp_cmd = 'CtrlP'                             " :CtrlP command to toggle ctrlp
+let g:ctrlp_show_hidden = 1                           " show hidden files in ctrlp
 
 
 """ vim-gitgutter
 let g:SignatureMarkTextHLDynamic = 1                  " vim gitgutter and vim signature lives together
 let g:gitgutter_enabled = 0                           " disable gitgutter by default
-let g:ctrlp_show_hidden = 1                           " show hidden files in ctrlp
 
 
 """ vim-hardtime
