@@ -6,7 +6,7 @@ fi
 
 ZSH_THEME="avit"
 
-ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="false"
 ZSH_TMUX_AUTOSTART="true"
 
 plugins=(git bundler rails tmux ruby rvm tmux)
