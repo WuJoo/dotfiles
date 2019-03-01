@@ -12,6 +12,8 @@
 
 - Ack: `https://beyondgrep.com/install/`
 
+- fzf: `https://github.com/junegunn/fzf`
+
 ## Install
 
 Clone repository:

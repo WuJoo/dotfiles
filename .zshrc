@@ -7,9 +7,11 @@ fi
 ZSH_THEME="avit"
 
 ENABLE_CORRECTION="false"
-ZSH_TMUX_AUTOSTART="true"
+ZSH_TMUX_AUTOSTART="false"
 
 plugins=(git bundler rails tmux ruby rvm tmux)
 
 source $ZSH/oh-my-zsh.sh
 export PATH="$PATH:$HOME/.rvm/bin"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
