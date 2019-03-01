@@ -15,3 +15,5 @@ source $ZSH/oh-my-zsh.sh
 export PATH="$PATH:$HOME/.rvm/bin"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -l -g ""' # use silver searcher and show hidden files in fzf
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"

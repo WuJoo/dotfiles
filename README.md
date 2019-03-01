@@ -10,7 +10,7 @@
 
 - oh-my-zsh
 
-- Ack: `https://beyondgrep.com/install/`
+- The Silver Searcher: `https://github.com/ggreer/the_silver_searcher`
 
 - fzf: `https://github.com/junegunn/fzf`
 

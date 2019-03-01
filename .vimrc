@@ -90,13 +90,15 @@ endif
 nmap j gj
 nmap k gk
 
+let mapleader = ","                                   " , as leader
+
 
 """ Colors
 colorscheme iceberg                                   " other colorschemes: monochrome monokai ubloh railscasts
 
 
 """ NERDTree
-nmap <F2> :NERDTreeToggle<CR>                         " F2 shortcut for NERDTree
+nmap <F2> :NERDTreeToggle<CR>|                        " F2 shortcut for NERDTree
 
 let NERDTreeShowHidden=1                              " show hidden files in NERDTree
 let NERDTreeMinimalUI = 1
@@ -132,7 +134,12 @@ let g:closetag_close_shortcut = '<leader>>'
 
 
 """ fzf
-nmap <c-p> :FZF<CR>                                   " ctrl-p shortcut for fzf
+nmap <c-p> :FZF<CR>|                                  " ctrl-p shortcut for fzf
+
+
+""" ack.vim
+nmap <Leader>a :Ack<Space>|                          " <Leader>a shortcut for ack
+let g:ackprg = 'ag --nogroup --nocolor --column'     " use silver searcher instead of ack
 
 
 """ vim-gitgutter
@@ -141,7 +148,7 @@ let g:gitgutter_enabled = 0                           " disable gitgutter by def
 
 
 """ vim-hardtime
-nmap <F3> :HardTimeToggle<CR>                         " F3 shortcut for hardtime toggle
+nmap <F3> :HardTimeToggle<CR>|                        " F3 shortcut for hardtime toggle
 let g:hardtime_default_on = 1                         " hardtime enabled by default
 let g:hardtime_ignore_buffer_patterns = ["NERD.*"]    " disable hardtime for NERDTree
 
