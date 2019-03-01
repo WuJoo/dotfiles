@@ -6,6 +6,8 @@ filetype off
 
 """" PLUGINS
 set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=/usr/local/opt/fzf
+
 call vundle#begin()
   Plugin 'VundleVim/Vundle.vim'                       " best plugin manager
 
@@ -23,7 +25,6 @@ call vundle#begin()
   """ Vim as IDE
   Plugin 'mileszs/ack.vim'                            " integration with ack searching(better grep in vim)
   Plugin 'w0rp/ale'                                   " asynchronous linting
-  Plugin 'ctrlpvim/ctrlp.vim'                         " fuzzy file finder
   Plugin 'ervandew/supertab'                          " tab completion in insert mode
   Plugin 'scrooloose/nerdtree'                        " file tree
   Plugin 'kshenoy/vim-signature'                      " showing marks next to line number
@@ -42,7 +43,6 @@ call vundle#begin()
   Plugin 'mechatroner/rainbow_csv'                    " betters colors and queries for .csv files
   Plugin 'mhinz/vim-startify'                         " custom start screen
 
-  "Plugin 'DavidEGx/ctrlp-smarttabs'
   "Plugin 'edkolev/tmuxline.vim'
   "Plugin 'epeli/slimux'
   "Plugin 'lervag/vimtex'
@@ -131,10 +131,8 @@ let g:closetag_shortcut = '>'
 let g:closetag_close_shortcut = '<leader>>'
 
 
-""" ctrlp.vim
-let g:ctrlp_map = '<c-p>'                             " ctrl+p shortcut to toggle ctrlp
-let g:ctrlp_cmd = 'CtrlP'                             " :CtrlP command to toggle ctrlp
-let g:ctrlp_show_hidden = 1                           " show hidden files in ctrlp
+""" fzf
+nmap <c-p> :FZF<CR>                                   " ctrl-p shortcut for fzf
 
 
 """ vim-gitgutter
@@ -149,7 +147,7 @@ let g:hardtime_ignore_buffer_patterns = ["NERD.*"]    " disable hardtime for NER
 
 
 """ rainbow_csv
-let g:rcsv_colorpairs = [['red', 'red'], ['blue', 'blue'], ['green', 'green'], ['magenta', 'magenta'], ['NONE', 'NONE'],['darkred', 'darkred'], ['darkblue', 'darkblue'], ['darkgreen', 'darkgreen'], ['darkmagenta', 'darkmagenta'],['darkcyan', 'darkcyan']] " colors for csv file columns
+let g:rcsv_colorpairs = [['red', 'red'], ['blue', 'blue'], ['green', 'green'], ['magenta', 'magenta'], ['NONE', 'NONE'], ['darkred', 'darkred'], ['darkblue', 'darkblue'], ['darkgreen', 'darkgreen'], ['darkmagenta', 'darkmagenta'], ['darkcyan', 'darkcyan']] " colors for csv file columns
 
 
 """ trimming whitespaces
@@ -167,3 +165,4 @@ if has("autocmd")
     autocmd BufNewFile *.rb 0r ~/.vim/templates/skeleton.rb
   augroup END
 endif                                                 " template for new ruby files
+
