@@ -7,6 +7,10 @@ if [ -d ~/dotfiles/.vim/bundle/Vundle.vim ]; then
   cd ~/dotfiles/.vim/bundle/Vundle.vim
   git pull origin master
 else
+  if ! [ -d ~/dotfiles/.vim/bundle ]; then
+    mkdir ~/dotfiles/.vim/bundle
+  fi
+
   cd ~/dotfiles/.vim/bundle
   git clone https://github.com/VundleVim/Vundle.vim.git
 fi
