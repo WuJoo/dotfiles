@@ -14,6 +14,7 @@ call vundle#begin()
   """ Programming languages support
   Plugin 'vim-ruby/vim-ruby'                          " better ruby support
   Plugin 'pangloss/vim-javascript'                    " better js support
+  Plugin 'joukevandermaas/vim-ember-hbs'              " better ember support
 
   """ Better productivity
   Plugin 'takac/vim-hardtime'                         " avoid hjkl
