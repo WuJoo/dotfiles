@@ -94,7 +94,8 @@ let mapleader = ","                                   " , as leader
 
 
 """ Colors
-colorscheme iceberg                                   " other colorschemes: monochrome monokai ubloh railscasts
+silent! colorscheme iceberg                          " other colorschemes: monochrome monokai ubloh railscasts
+                                                     " when colorscheme is missing error is silent
 
 
 """ NERDTree
