@@ -149,7 +149,7 @@ let g:gitgutter_enabled = 0                           " disable gitgutter by def
 
 """ vim-hardtime
 nmap <F3> :HardTimeToggle<CR>|                        " F3 shortcut for hardtime toggle
-let g:hardtime_default_on = 1                         " hardtime enabled by default
+let g:hardtime_default_on = 0                         " hardtime disabled by default
 let g:hardtime_ignore_buffer_patterns = ["NERD.*"]    " disable hardtime for NERDTree
 
 
