@@ -6,7 +6,12 @@ filetype off
 
 """" PLUGINS
 set rtp+=~/.vim/bundle/Vundle.vim
-set rtp+=/usr/local/opt/fzf
+
+if system('uname -s') == "Darwin\n"
+  set rtp+=/usr/local/opt/fzf
+else
+  set rtp+=/home/linuxbrew/.linuxbrew/opt/fzf
+endif
 
 call vundle#begin()
   Plugin 'VundleVim/Vundle.vim'                       " best plugin manager
