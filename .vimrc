@@ -165,6 +165,12 @@ let g:hardtime_ignore_buffer_patterns = ["NERD.*"]    " disable hardtime for NER
 let g:rcsv_colorpairs = [['red', 'red'], ['blue', 'blue'], ['green', 'green'], ['magenta', 'magenta'], ['NONE', 'NONE'], ['darkred', 'darkred'], ['darkblue', 'darkblue'], ['darkgreen', 'darkgreen'], ['darkmagenta', 'darkmagenta'], ['darkcyan', 'darkcyan']] " colors for csv file columns
 
 
+""" buffers
+nmap <Leader>bn :bn<CR>|                              " <Leader>bn shortcut for next buffer
+nmap <Leader>bp :bp<CR>|                              " <Leader>bp shortcut for previous buffer
+nmap <Leader>bd :bd<CR>|                              " <Leader>bd shortcut for delete buffer
+
+
 """ trimming whitespaces
 
 fun! TrimWhitespace()
