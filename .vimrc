@@ -19,8 +19,8 @@ call vundle#begin()
   """ Programming languages support
   Plugin 'vim-ruby/vim-ruby'                          " better ruby support
   Plugin 'pangloss/vim-javascript'                    " better js support
-  Plugin 'joukevandermaas/vim-ember-hbs'              " better ember support
-  Plugin 'szymonmaszke/vimpyter'                      " jupyter notebook support
+  "Plugin 'joukevandermaas/vim-ember-hbs'             " better ember support
+  "Plugin 'szymonmaszke/vimpyter'                     " jupyter notebook support
 
   """ Better productivity
   Plugin 'takac/vim-hardtime'                         " avoid hjkl
@@ -36,23 +36,22 @@ call vundle#begin()
   Plugin 'ervandew/supertab'                          " tab completion in insert mode
   Plugin 'scrooloose/nerdtree'                        " file tree
   Plugin 'kshenoy/vim-signature'                      " showing marks next to line number
-  Plugin 'junegunn/vim-peekaboo'                      " better support for registers
   Plugin 'tpope/vim-fugitive'                         " git wrapper
-  Plugin 'airblade/vim-gitgutter'                     " show git diff in vim
   Plugin 'rhysd/reply.vim'                            " REPL inside vim
+  "Plugin 'junegunn/vim-peekaboo'                     " better support for registers
+  "Plugin 'airblade/vim-gitgutter'                    " show git diff in vim
 
   """ Prettier Vim
   Plugin 'nathanaelkane/vim-indent-guides'            " coloring indentations
   Plugin 'vim-airline/vim-airline'                    " airline statusline
   Plugin 'vim-airline/vim-airline-themes'             " themes for airline statusline
   Plugin 'cocopon/iceberg.vim'                        " iceberg colorscheme
-  Plugin 'flazz/vim-colorschemes'                     " useful to checking different colorschemes
+  "Plugin 'flazz/vim-colorschemes'                    " useful to checking different colorschemes
 
   """ Other
   Plugin 'mechatroner/rainbow_csv'                    " betters colors and queries for .csv files
   Plugin 'mhinz/vim-startify'                         " custom start screen
-
-  "Plugin 'lervag/vimtex'
+  "Plugin 'lervag/vimtex'                             " latex support
 call vundle#end()
 
 syntax on
