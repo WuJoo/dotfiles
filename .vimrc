@@ -28,6 +28,7 @@ call vundle#begin()
   Plugin 'tpope/vim-endwise'                          " smart do end blocks in ruby
   Plugin 'alvan/vim-closetag'                         " closing html tags
   Plugin 'jiangmiao/auto-pairs'                       " inserting brackets in pairs
+  Plugin 'rhysd/clever-f.vim'                         " extended f, F, t and T key mapping
 
   """ Vim as IDE
   Plugin 'mileszs/ack.vim'                            " integration with ack searching(better grep in vim)
