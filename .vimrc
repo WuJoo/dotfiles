@@ -39,6 +39,7 @@ call vundle#begin()
   Plugin 'junegunn/vim-peekaboo'                      " better support for registers
   Plugin 'tpope/vim-fugitive'                         " git wrapper
   Plugin 'airblade/vim-gitgutter'                     " show git diff in vim
+  Plugin 'rhysd/reply.vim'                            " REPL inside vim
 
   """ Prettier Vim
   Plugin 'nathanaelkane/vim-indent-guides'            " coloring indentations
@@ -51,8 +52,6 @@ call vundle#begin()
   Plugin 'mechatroner/rainbow_csv'                    " betters colors and queries for .csv files
   Plugin 'mhinz/vim-startify'                         " custom start screen
 
-  "Plugin 'edkolev/tmuxline.vim'
-  "Plugin 'epeli/slimux'
   "Plugin 'lervag/vimtex'
 call vundle#end()
 
@@ -160,6 +159,10 @@ let g:gitgutter_enabled = 0                           " disable gitgutter by def
 nmap <F3> :HardTimeToggle<CR>|                        " F3 shortcut for hardtime toggle
 let g:hardtime_default_on = 0                         " hardtime disabled by default
 let g:hardtime_ignore_buffer_patterns = ["NERD.*"]    " disable hardtime for NERDTree
+
+""" reply.vim
+nmap <Leader>rp :Repl<CR>|                            " Open REPL
+nmap <Leader>rs :ReplSend<CR>|                        " Send code to REPL
 
 
 """ rainbow_csv
