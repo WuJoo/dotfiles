@@ -83,6 +83,9 @@ set smartindent                                       " even better autoindent (
 set background=dark                                   " configure Vim to use brighter colors
 set autoread                                          " autoreload the file in Vim if it has been changed outside of Vim
 
+set splitright                                        " :vs opens new buffer at right
+set splitbelow                                        " :sp opens new buffer below
+
 set backspace=indent,eol,start
 set term=screen-256color
 
