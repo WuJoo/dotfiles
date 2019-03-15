@@ -1,4 +1,4 @@
-set shell=/bin/bash
+set shell=/usr/local/bin/zsh
 
 set nocompatible
 filetype off
