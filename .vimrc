@@ -51,7 +51,8 @@ call vundle#begin()
   """ Other
   Plugin 'mechatroner/rainbow_csv'                    " betters colors and queries for .csv files
   Plugin 'mhinz/vim-startify'                         " custom start screen
-  "Plugin 'lervag/vimtex'                             " latex support
+  Plugin 'xuhdev/vim-latex-live-preview'              " latex pdf live preview
+  Plugin 'lervag/vimtex'                              " latex support
 call vundle#end()
 
 syntax on
@@ -95,16 +96,17 @@ if has('unnamedplus')
     set clipboard=unnamed,unnamedplus
 endif
 
+
 " move vertically by visual line (don't skip wrapped lines)
 nmap j gj
 nmap k gk
 
 let mapleader = ","                                   " , as leader
-
+nmap <Leader>w <ESC>:w<CR>|                           " <Leader>w for file save
 
 """ Colors
-silent! colorscheme iceberg                          " other colorschemes: monochrome monokai ubloh railscasts
-                                                     " when colorscheme is missing error is silent
+silent! colorscheme iceberg                           " other colorschemes: monochrome monokai ubloh railscasts
+                                                      " when colorscheme is missing error is silent
 
 
 """ NERDTree
@@ -165,6 +167,7 @@ let g:hardtime_ignore_buffer_patterns = ["NERD.*"]    " disable hardtime for NER
 """ reply.vim
 nmap <Leader>rp :Repl<CR>|                            " Open REPL
 nmap <Leader>rs :ReplSend<CR>|                        " Send code to REPL
+nmap <Leader>t :vert term<CR>|                        " Opens vertical terminal
 
 
 """ rainbow_csv
@@ -175,6 +178,12 @@ let g:rcsv_colorpairs = [['red', 'red'], ['blue', 'blue'], ['green', 'green'], [
 nmap <Leader>bn :bn<CR>|                              " <Leader>bn shortcut for next buffer
 nmap <Leader>bp :bp<CR>|                              " <Leader>bp shortcut for previous buffer
 nmap <Leader>bd :bd<CR>|                              " <Leader>bd shortcut for delete buffer
+
+""" latex
+let g:livepreview_previewer = 'open -a Preview'       " use Preview program on MacOs for live preview
+let g:livepreview_engine = 'pdflatex'                 " live preview uses pdflatex to compile tex to pdf
+
+nmap <Leader>ltx :LLPStartPreview<CR>|                " <Leader>ltx start live preview of tex pdf
 
 
 """ trimming whitespaces
