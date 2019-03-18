@@ -23,6 +23,7 @@ call vundle#begin()
   """ Programming languages support
   Plugin 'vim-ruby/vim-ruby'                          " better ruby support
   Plugin 'pangloss/vim-javascript'                    " better js support
+  Plugin 'slim-template/vim-slim'                     " slim syntax highlighting
   "Plugin 'joukevandermaas/vim-ember-hbs'             " better ember support
   "Plugin 'szymonmaszke/vimpyter'                     " jupyter notebook support
 
