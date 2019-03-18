@@ -1,4 +1,8 @@
-set shell=/usr/local/bin/zsh
+if system('uname -s') == "Darwin\n"
+  set shell=/usr/local/bin/zsh
+else
+  set shell=/bin/bash
+end
 
 set nocompatible
 filetype off
