@@ -58,6 +58,8 @@ call vundle#begin()
   Plugin 'mhinz/vim-startify'                         " custom start screen
   Plugin 'xuhdev/vim-latex-live-preview'              " latex pdf live preview
   Plugin 'lervag/vimtex'                              " latex support
+  Plugin 'khzaw/vim-conceal'                          " conceal feature to make code more readble
+  Plugin 'KeitaNakamura/tex-conceal.vim'              " extension of conceal feature for latex
 call vundle#end()
 
 syntax on
@@ -189,6 +191,10 @@ let g:livepreview_previewer = 'open -a Preview'       " use Preview program on M
 let g:livepreview_engine = 'pdflatex'                 " live preview uses pdflatex to compile tex to pdf
 
 nmap <Leader>ltx :LLPStartPreview<CR>|                " <Leader>ltx start live preview of tex pdf
+
+""" tex-conceal
+set conceallevel=2
+let g:tex_conceal="abdgm"
 
 
 """ trimming whitespaces
